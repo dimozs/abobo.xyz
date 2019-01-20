@@ -1,5 +1,7 @@
 <?php
 
+namespace Classes\Controllers;
+
 class GoodController implements IController
 {
     protected $_params;

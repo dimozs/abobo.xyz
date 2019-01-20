@@ -1,7 +1,7 @@
 <?php
 
-require_once "../engine/Classes/App.php";
+require_once "../engine/autoloader.php";
 
-$app=App::getInstance();
+$app=\Classes\App::getInstance();
 
 $app->run();

@@ -1,6 +1,8 @@
 <?php
 
-require_once "IController.php";
+namespace Classes\Controllers;
+
+use Classes\Views\DefaultView;
 
 class DefaultController implements IController
 {
@@ -11,6 +13,7 @@ class DefaultController implements IController
     }
 
     public function render(){
-        return "I'm Default Controller with params: ".implode(', ',$this->_params);
+        $view=new DefaultView($this->_params);
+        return $view->view();
     }
 }

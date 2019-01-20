@@ -14,6 +14,17 @@ h2{
 .knopka{
 	text-align: center;
 }
+.knopka>a{
+	text-decoration: none;
+	color: #0c5d00;
+	border: 2px solid #0c5d00;
+	border-radius: 8px;
+	padding: 4px 8px;
+	cursor: pointer;
+}
+.knopka>a:hover{
+	box-shadow: #000 1px 1px 2px;
+}
 button{
 	width: 200px;
 	height: 40px;

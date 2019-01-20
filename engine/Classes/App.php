@@ -1,7 +1,10 @@
 <?php
 
-require_once "Controllers/DefaultController.php";
-require_once "Controllers/GoodController.php";
+namespace Classes;
+
+use Classes\Controllers\DefaultController;
+use Classes\Controllers\GoodController;
+use Classes\Controllers\IController;
 
 class App
 {
@@ -37,7 +40,7 @@ class App
 
         $controller=$this->createController($_SERVER['REQUEST_URI']);
 
-        echo 'TEST -> '.$controller->render();
+        echo $controller->render();
     }
 
 }
