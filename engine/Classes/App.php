@@ -37,7 +37,7 @@ class App
 
         $controller=$this->createController($_SERVER['REQUEST_URI']);
 
-        echo $controller->render();
+        echo 'TEST -> '.$controller->render();
     }
 
 }
