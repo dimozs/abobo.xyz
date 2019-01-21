@@ -11,18 +11,18 @@ class DefaultView implements IView
     }
 
     public function view(){
-        $img_path='/images/';
-        $str='<div>';
-        foreach($this->_param as $publish){
-            $str.='
+$img_path='/images/';
+$str='<div>';
+foreach($this->_param as $publish){
+    $str.='
 <a href="/publish/'.$publish['id'].'">
     <img src="'.$img_path.$publish['photo'].'">
     <div>'.$publish['descr'].'</div>
 </a>';
-        }
-        $str.='</div>';
+}
+$str.='</div>';
 
-        return <<<html
+return <<<html
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,5 +40,5 @@ class DefaultView implements IView
 </body>
 </html>
 html;
-    }
+}
 }

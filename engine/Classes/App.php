@@ -3,7 +3,7 @@
 namespace Classes;
 
 use Classes\Controllers\DefaultController;
-use Classes\Controllers\GoodController;
+use Classes\Controllers\PublishController;
 use Classes\Controllers\IController;
 
 class App
@@ -27,9 +27,9 @@ class App
         $params=explode('/',$request);
         array_shift($params);
 
-        if($params[0]==='good'){
+        if($params[0]==='publish'){
             array_shift($params);
-            $controller=new GoodController($params);
+            $controller=new PublishController($params);
         }else
             $controller=new DefaultController($params);
 
