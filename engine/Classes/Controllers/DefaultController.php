@@ -2,6 +2,7 @@
 
 namespace Classes\Controllers;
 
+use Classes\Models\DefaultModel;
 use Classes\Views\DefaultView;
 
 class DefaultController implements IController
@@ -13,7 +14,11 @@ class DefaultController implements IController
     }
 
     public function render(){
-        $view=new DefaultView($this->_params);
+        $model=new DefaultModel($this->_params);
+
+        if($err=$model->load())throw new \Exception($err);
+
+        $view=new DefaultView($model->getData());
         return $view->view();
     }
 }

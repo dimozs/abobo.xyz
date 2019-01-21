@@ -2,7 +2,7 @@
 
 namespace Classes\Views;
 
-class DefaultView
+class DefaultView implements IView
 {
     protected $_param;
 
@@ -11,7 +11,16 @@ class DefaultView
     }
 
     public function view(){
-        $strParam="Default Views with params: ".implode(', ',$this->_param);
+        $img_path='/images/';
+        $str='<div>';
+        foreach($this->_param as $publish){
+            $str.='
+<a href="/publish/'.$publish['id'].'">
+    <img src="'.$img_path.$publish['photo'].'">
+    <div>'.$publish['descr'].'</div>
+</a>';
+        }
+        $str.='</div>';
 
         return <<<html
 <!DOCTYPE html>
@@ -27,7 +36,7 @@ class DefaultView
     <div class="knopka">
         <a href="/static/abobo.html">Про Абобо</a>
     </div>
-    <h2>$strParam</h2>
+    $str
 </body>
 </html>
 html;
