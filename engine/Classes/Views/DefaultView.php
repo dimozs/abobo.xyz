@@ -12,7 +12,7 @@ class DefaultView implements IView
 
     public function view(){
 $img_path='/images/';
-$str='<div>';
+$str='<div class="content">';
 foreach($this->_param as $publish){
     $str.='
 <a href="/publish/'.$publish['id'].'">
@@ -27,18 +27,18 @@ return <<<html
 <html>
 <head>
     <meta charset = "utf-8">
-    <title>Abobo</title>
+    <title>Publishes</title>
     <link rel="stylesheet" type="text/css" href="/css/style1.css">
 </head>
 <body>
-    <h1>Просто сайт про Абобо</h1>
-    <h2>Просто немного про Абобо и его приключениях</h2>
+    <h1>Publishes</h1>
+    <h2>Все публикации</h2>
     <div class="knopka">
-        <a href="/static/abobo.html">Про Абобо</a>
+        <a href="/static/abobo.html">Staric about</a>
     </div>
     $str
 </body>
 </html>
 html;
-}
+    }
 }

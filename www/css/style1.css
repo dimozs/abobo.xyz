@@ -40,3 +40,11 @@ button{
 a{
 	font-size: 19px;
 }
+.content{
+	margin: 5px;
+}
+.content>a{
+	margin: 5px;
+	text-decoration: none;
+	color: black;
+}

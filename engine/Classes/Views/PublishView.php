@@ -16,7 +16,6 @@ class PublishView implements IView
 <div>
     <img src="'.$img_path.$this->_param['photo'].'">
     <div>'.$this->_param['descr'].'</div>
-</a>
 </div>';
 
         return <<<html
